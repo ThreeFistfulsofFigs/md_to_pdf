@@ -1,0 +1,13 @@
+# Suggested improvement for dependency checking
+def check_dependencies():
+    missing_deps = []
+    try:
+        import markdown2
+    except ImportError:
+        missing_deps.append("markdown2")
+    try:
+        import pdfkit
+    except ImportError:
+        missing_deps.append("pdfkit")
+    
+    return missing_deps
